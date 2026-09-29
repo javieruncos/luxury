@@ -79,7 +79,7 @@ export default function FinalCTA() {
                 type="text"
                 autoComplete="off"
                 placeholder="¿Qué tipo de residencia buscás?"
-                className="min-w-0 flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/40 focus-visible:outline-none! max-sm:py-2"
+                className="min-w-0 flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/40 focus-visible:outline-none! max-sm:py-2 max-sm:text-base"
               />
               <button
                 type="submit"

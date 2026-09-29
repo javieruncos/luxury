@@ -5,7 +5,6 @@ const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Propiedades", href: "#propiedades" },
-  { label: "Noticias", href: "#noticias" },
 ];
 
 export default function NavDock({ variant = "fixed" }) {

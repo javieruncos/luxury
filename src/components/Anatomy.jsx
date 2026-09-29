@@ -40,7 +40,7 @@ export default function Anatomy() {
         };
 
   return (
-    <section aria-labelledby="anatomy-title" className="bg-canvas">
+    <section id="nosotros" aria-labelledby="anatomy-title" className="bg-canvas">
       <div className="mx-auto w-full max-w-[1440px] px-4 py-20 sm:px-5 lg:py-28">
         <motion.div {...reveal()} className="lg:col-span-7">
           <p className="text-xs font-semibold tracking-[0.18em] text-muted">
