@@ -3,6 +3,7 @@ import Projects from "./components/Projects";
 import Anatomy from "./components/Anatomy";
 import CrownJewel from "./components/CrownJewel";
 import Testimonial from "./components/Testimonial";
+import FinalCTA from "./components/FinalCTA";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Anatomy />
       <CrownJewel />
       <Testimonial />
+      <FinalCTA />
     </main>
   );
 }
