@@ -4,6 +4,7 @@ import Anatomy from "./components/Anatomy";
 import CrownJewel from "./components/CrownJewel";
 import Testimonial from "./components/Testimonial";
 import FinalCTA from "./components/FinalCTA";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <CrownJewel />
       <Testimonial />
       <FinalCTA />
+      <Footer />
     </main>
   );
 }

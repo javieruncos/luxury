@@ -23,8 +23,8 @@ const properties = [
     alt: "Living de doble altura de Bel-Air Crown con ventanales",
   },
   {
-    name: "Nordica Glasshouse",
-    badge: "Glasshouse",
+    name: "Nordica",
+    badge: "Minimalista",
     meta: "Exterior",
     src: nordicaGlasshouse,
     alt: "Pabellón de vidrio Nordica iluminado al atardecer",

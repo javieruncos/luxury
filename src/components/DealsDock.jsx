@@ -5,7 +5,7 @@ import nordicaGlasshouse from "../assets/images/modern_minimalist_architectural_
 const deals = [
   { name: "Villa Solarium", src: villaSolarium, alt: "Terraza con pileta de Villa Solarium en Ginebra" },
   { name: "Bel-Air Crown", src: belAirCrown, alt: "Living de doble altura de Bel-Air Crown" },
-  { name: "Nordica Glasshouse", src: nordicaGlasshouse, alt: "Casa de vidrio Nordica iluminada al atardecer" },
+  { name: "Nordica", src: nordicaGlasshouse, alt: "Casa de vidrio Nordica iluminada al atardecer" },
 ];
 
 export default function DealsDock({ variant = "overlay" }) {
@@ -18,15 +18,17 @@ export default function DealsDock({ variant = "overlay" }) {
         <p className="px-1 text-[0.6875rem] font-semibold tracking-[0.14em] text-white/70">
           NUESTRAS 3 PROPIEDADES DESTACADAS
         </p>
-        <ul className="mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-1">
+        <ul className="mt-3 flex gap-3 pb-1 max-md:snap-x max-md:snap-mandatory max-md:overflow-x-auto md:grid md:grid-cols-3 md:pb-0">
           {deals.map((deal) => (
-            <li key={deal.name} className="w-44 shrink-0 snap-start">
-              <img
-                src={deal.src}
-                alt={deal.alt}
-                loading="lazy"
-                className="h-24 w-full rounded-xl object-cover"
-              />
+            <li key={deal.name} className="w-44 shrink-0 max-md:snap-start md:w-auto">
+              <div className="h-24 overflow-hidden rounded-xl">
+                <img
+                  src={deal.src}
+                  alt={deal.alt}
+                  loading="lazy"
+                  className="block h-full w-full object-cover"
+                />
+              </div>
               <p className="mt-2 px-0.5 text-xs font-medium text-white">
                 {deal.name}
               </p>
@@ -47,13 +49,15 @@ export default function DealsDock({ variant = "overlay" }) {
       </p>
       <ul className="mt-3 grid grid-cols-3 gap-3">
         {deals.map((deal) => (
-          <li key={deal.name}>
-            <img
-              src={deal.src}
-              alt={deal.alt}
-              loading="lazy"
-              className="h-20 w-full rounded-xl object-cover [@media(max-height:800px)]:h-16"
-            />
+            <li key={deal.name}>
+              <div className="h-20 overflow-hidden rounded-xl [@media(max-height:800px)]:h-16">
+                <img
+                  src={deal.src}
+                  alt={deal.alt}
+                  loading="lazy"
+                  className="block h-full w-full object-cover"
+                />
+              </div>
             <p className="mt-2 px-0.5 text-xs font-medium text-white">
               {deal.name}
             </p>
