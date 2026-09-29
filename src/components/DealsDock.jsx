@@ -20,7 +20,7 @@ export default function DealsDock({ variant = "overlay" }) {
         </p>
         <ul className="mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-1">
           {deals.map((deal) => (
-            <li key={deal.name} className="w-40 shrink-0 snap-start">
+            <li key={deal.name} className="w-44 shrink-0 snap-start">
               <img
                 src={deal.src}
                 alt={deal.alt}

@@ -2,7 +2,7 @@ export default function Metric() {
   return (
     <div aria-label="Valoración visual de referencia: 4.9 sobre 5">
       <p className="flex items-baseline gap-1">
-        <span className="text-4xl font-medium tracking-[-0.04em] text-white [@media(max-height:750px)]:text-3xl [@media(min-height:800px)]:text-5xl">
+        <span className="text-4xl font-medium tracking-[-0.04em] text-white [@media(max-height:800px)]:text-3xl [@media(min-height:851px)]:text-5xl">
           4.9
         </span>
         <span className="text-lg text-white/60">/5.0</span>

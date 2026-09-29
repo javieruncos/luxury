@@ -46,7 +46,7 @@ export default function NavDock({ variant = "fixed" }) {
             ))}
           </ul>
 
-          <div className="hidden items-center gap-5 md:flex">
+          <div className="hidden items-center gap-5 lg:flex">
             <a
               href="#contacto"
               className="hidden text-sm text-muted transition-colors hover:text-carbon xl:block"
@@ -61,13 +61,7 @@ export default function NavDock({ variant = "fixed" }) {
             </a>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
-            <a
-              href="#propiedades"
-              className="rounded-full bg-lime px-5 py-2 text-sm font-semibold text-carbon"
-            >
-              Explorar
-            </a>
+          <div className="flex items-center lg:hidden">
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
@@ -81,7 +75,7 @@ export default function NavDock({ variant = "fixed" }) {
         </nav>
 
         {open && (
-          <div className="mt-2 rounded-3xl border border-black/[0.08] bg-white/95 p-3 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.25)] backdrop-blur-xl md:hidden">
+          <div className="mt-2 rounded-3xl border border-black/[0.08] bg-white/95 p-3 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.25)] backdrop-blur-xl lg:hidden">
             <ul className="flex flex-col">
               {links.map((link) => (
                 <li key={link.href}>
@@ -101,6 +95,15 @@ export default function NavDock({ variant = "fixed" }) {
                   className="block rounded-2xl px-4 py-3 text-sm text-muted hover:bg-black/[0.04]"
                 >
                   Contacto
+                </a>
+              </li>
+              <li className="mt-1 border-t border-black/[0.06] pt-3">
+                <a
+                  href="#propiedades"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-full bg-lime px-6 py-3.5 text-center text-sm font-semibold text-carbon transition-colors hover:bg-lime-hover"
+                >
+                  Explorar
                 </a>
               </li>
             </ul>

@@ -25,13 +25,13 @@ export default function Hero() {
     >
       <motion.div
         {...animate}
-        className="relative mx-auto h-[86svh] min-h-[560px] w-full max-w-[1440px] overflow-hidden rounded-hero lg:h-full lg:min-h-0"
+        className="relative mx-auto h-[86svh] min-h-[560px] w-full max-w-[1440px] overflow-hidden rounded-hero lg:h-full lg:min-h-0 [@media(max-height:500px)]:min-h-[360px]"
       >
         <img
           src={heroImage}
           alt="Terraza de penthouse al atardecer con pileta infinita y skyline iluminado"
           fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover object-[62%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-[62%_center] max-lg:object-[55%_center] max-lg:[@media(max-height:500px)]:object-[40%_center]"
         />
         <div
           aria-hidden="true"
@@ -49,29 +49,29 @@ export default function Hero() {
             <p className="text-xs font-semibold tracking-[0.18em] text-white/70">
               ARQUITECTURA CURADA
             </p>
-            <h1 className="mt-3 text-[clamp(2.75rem,6.5vw,4.75rem)] leading-[1.02] font-semibold tracking-[-0.03em] text-white [@media(max-height:750px)]:mt-2 [@media(max-height:750px)]:text-[clamp(2.375rem,5vw,3.5rem)] [@media(min-height:850px)]:text-[5.25rem] lg:tracking-[-0.035em]">
+            <h1 className="mt-3 text-[clamp(2.75rem,6.5vw,4.75rem)] leading-[1.02] font-semibold tracking-[-0.03em] text-white max-[400px]:text-[2.1rem] max-sm:leading-[1.05] min-[401px]:max-sm:text-[2.55rem] min-[401px]:[@media(max-height:800px)]:mt-2 min-[401px]:[@media(max-height:800px)]:text-[clamp(2.375rem,5vw,3.5rem)] min-[640px]:[@media(min-height:850px)]:text-[5.25rem] lg:tracking-[-0.035em]">
               Descubrí los
               <br />
               penthouses más
               <br />
               icónicos
             </h1>
-            <p className="mt-4 max-w-md text-[1.0625rem] leading-7 font-normal text-white/80 lg:text-[1.1875rem] [@media(max-height:750px)]:mt-3 [@media(max-height:750px)]:text-[0.9375rem] [@media(max-height:750px)]:leading-6">
+            <p className="mt-4 max-w-md text-[1.0625rem] leading-7 font-normal text-white/80 lg:text-[1.1875rem] [@media(max-height:800px)]:mt-3 [@media(max-height:800px)]:text-[0.9375rem] [@media(max-height:800px)]:leading-6 [@media(max-height:500px)]:hidden">
               Una selección de residencias extraordinarias donde la
               arquitectura, las vistas y el diseño encuentran su máxima
               expresión.
             </p>
-            <div className="mt-5 [@media(max-height:750px)]:mt-4">
+            <div className="mt-5 [@media(max-height:800px)]:mt-4">
               <a
                 href="#propiedades"
-                className="inline-block rounded-full bg-lime px-8 py-3.5 text-sm font-semibold text-carbon transition-all hover:scale-105 hover:bg-lime-hover [@media(max-height:750px)]:py-2.5"
+                className="inline-block rounded-full bg-lime px-8 py-3.5 text-sm font-semibold text-carbon transition-all hover:scale-105 hover:bg-lime-hover [@media(max-height:800px)]:py-2.5"
               >
                 Ver penthouses
               </a>
             </div>
           </div>
 
-          <div className="mt-6 [@media(max-height:750px)]:mt-4 [@media(min-height:800px)]:mt-6">
+          <div className="mt-6 [@media(max-height:500px)]:hidden [@media(max-height:800px)]:mt-4 [@media(min-height:801px)]:mt-6">
             <Metric />
           </div>
         </div>
