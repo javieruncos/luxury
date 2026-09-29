@@ -1,14 +1,10 @@
-import NavDock from "./components/NavDock";
 import Hero from "./components/Hero";
 
 function App() {
   return (
-    <>
-      <NavDock />
-      <main>
-        <Hero />
-      </main>
-    </>
+    <main>
+      <Hero />
+    </main>
   );
 }
 

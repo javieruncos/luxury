@@ -13,7 +13,7 @@ export default function DealsDock({ variant = "overlay" }) {
     return (
       <aside
         aria-label="Nuestras 3 propiedades destacadas"
-        className="rounded-frame border border-black/[0.08] bg-coal p-4 md:hidden"
+        className="rounded-frame border border-black/[0.08] bg-coal p-4 lg:hidden"
       >
         <p className="px-1 text-[0.6875rem] font-semibold tracking-[0.14em] text-white/70">
           NUESTRAS 3 PROPIEDADES DESTACADAS
@@ -40,7 +40,7 @@ export default function DealsDock({ variant = "overlay" }) {
   return (
     <aside
       aria-label="Nuestras 3 propiedades destacadas"
-      className="absolute right-6 bottom-6 hidden w-105 rounded-2xl border border-white/15 bg-black/55 p-4 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.25)] backdrop-blur-xl md:block"
+      className="absolute right-5 bottom-5 z-10 hidden w-[26rem] rounded-2xl border border-white/15 bg-black/55 p-4 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.25)] backdrop-blur-xl lg:block [@media(max-height:800px)]:w-[23rem]"
     >
       <p className="px-1 text-[0.6875rem] font-semibold tracking-[0.14em] text-white/70">
         NUESTRAS 3 PROPIEDADES DESTACADAS
@@ -52,7 +52,7 @@ export default function DealsDock({ variant = "overlay" }) {
               src={deal.src}
               alt={deal.alt}
               loading="lazy"
-              className="h-20 w-full rounded-xl object-cover"
+              className="h-20 w-full rounded-xl object-cover [@media(max-height:800px)]:h-16"
             />
             <p className="mt-2 px-0.5 text-xs font-medium text-white">
               {deal.name}

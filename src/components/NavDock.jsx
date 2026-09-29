@@ -8,12 +8,16 @@ const links = [
   { label: "Noticias", href: "#noticias" },
 ];
 
-export default function NavDock() {
+export default function NavDock({ variant = "fixed" }) {
   const [open, setOpen] = useState(false);
+  const position =
+    variant === "absolute"
+      ? "absolute inset-x-0 top-4 z-20 flex justify-center"
+      : "fixed inset-x-0 top-5 z-50 flex justify-center px-5";
 
   return (
-    <header className="fixed inset-x-0 top-5 z-50 flex justify-center px-5">
-      <div className="w-full max-w-3xl">
+    <header className={position}>
+      <div className="w-[min(calc(100%-2.5rem),82.5rem)]">
         <nav
           aria-label="Navegación principal"
           className="flex items-center justify-between gap-4 rounded-full border border-black/[0.08] bg-white/95 py-2.5 pr-2.5 pl-6 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.25)] backdrop-blur-xl"

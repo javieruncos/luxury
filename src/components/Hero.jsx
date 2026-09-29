@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "motion/react";
 import heroImage from "../assets/images/ultra_luxury_architectural_photography_of_a_modern_high_rise_penthouse_at_dusk..png";
+import NavDock from "./NavDock";
 import Metric from "./Metric";
 import DealsDock from "./DealsDock";
 
@@ -17,16 +18,20 @@ export default function Hero() {
       };
 
   return (
-    <section id="inicio" aria-label="Penthouses destacados" className="px-4 pt-24 sm:px-5">
+    <section
+      id="inicio"
+      aria-label="Penthouses destacados"
+      className="min-h-svh px-4 py-4 sm:px-5 lg:h-svh lg:min-h-[640px]"
+    >
       <motion.div
         {...animate}
-        className="relative mx-auto min-h-[88svh] w-full max-w-[1440px] overflow-hidden rounded-hero"
+        className="relative mx-auto h-[86svh] min-h-[560px] w-full max-w-[1440px] overflow-hidden rounded-hero lg:h-full lg:min-h-0"
       >
         <img
           src={heroImage}
           alt="Terraza de penthouse al atardecer con pileta infinita y skyline iluminado"
           fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover object-[68%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-[62%_center]"
         />
         <div
           aria-hidden="true"
@@ -37,49 +42,44 @@ export default function Hero() {
           className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/45 via-black/10 to-transparent md:w-3/5"
         />
 
-        <div className="relative flex min-h-[88svh] flex-col justify-end p-6 sm:p-10 lg:p-14">
+        <NavDock variant="absolute" />
+
+        <div className="absolute inset-x-0 top-[104px] bottom-0 z-10 flex min-h-0 flex-col justify-end p-6 pb-5 sm:p-8 sm:pb-6 lg:px-12 lg:pb-7">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold tracking-[0.18em] text-white/70">
               ARQUITECTURA CURADA
             </p>
-            <h1 className="mt-4 text-[2.75rem] leading-[1.02] font-semibold tracking-[-0.03em] text-white lg:text-[5rem] lg:tracking-[-0.035em]">
+            <h1 className="mt-3 text-[clamp(2.75rem,6.5vw,4.75rem)] leading-[1.02] font-semibold tracking-[-0.03em] text-white [@media(max-height:750px)]:mt-2 [@media(max-height:750px)]:text-[clamp(2.375rem,5vw,3.5rem)] [@media(min-height:850px)]:text-[5.25rem] lg:tracking-[-0.035em]">
               Descubrí los
               <br />
               penthouses más
               <br />
               icónicos
             </h1>
-            <p className="mt-5 max-w-md text-base leading-7 font-normal text-white/80 lg:text-lg">
+            <p className="mt-4 max-w-md text-[1.0625rem] leading-7 font-normal text-white/80 lg:text-[1.1875rem] [@media(max-height:750px)]:mt-3 [@media(max-height:750px)]:text-[0.9375rem] [@media(max-height:750px)]:leading-6">
               Una selección de residencias extraordinarias donde la
               arquitectura, las vistas y el diseño encuentran su máxima
               expresión.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-4">
+            <div className="mt-5 [@media(max-height:750px)]:mt-4">
               <a
                 href="#propiedades"
-                className="rounded-full bg-lime px-8 py-3.5 text-sm font-semibold text-carbon transition-all hover:scale-105 hover:bg-lime-hover"
+                className="inline-block rounded-full bg-lime px-8 py-3.5 text-sm font-semibold text-carbon transition-all hover:scale-105 hover:bg-lime-hover [@media(max-height:750px)]:py-2.5"
               >
                 Ver penthouses
-              </a>
-              <a
-                href="#nosotros"
-                className="rounded-full border border-white/30 bg-white/15 px-7 py-3 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-white/25"
-              >
-                Conocer Pentco
               </a>
             </div>
           </div>
 
-          <div className="mt-10 flex items-end justify-between gap-6 pb-1 md:pb-2">
+          <div className="mt-6 [@media(max-height:750px)]:mt-4 [@media(min-height:800px)]:mt-6">
             <Metric />
-            <div className="hidden w-105 shrink-0 md:block" aria-hidden="true" />
           </div>
         </div>
 
         <DealsDock variant="overlay" />
       </motion.div>
 
-      <div className="mx-auto mt-4 w-full max-w-[1440px]">
+      <div className="mx-auto mt-4 w-full max-w-[1440px] lg:hidden">
         <DealsDock variant="below" />
       </div>
     </section>
